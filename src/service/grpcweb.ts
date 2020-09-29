@@ -182,7 +182,7 @@ function printServiceStub(methodPrinter: Printer, service: RPCDescriptor) {
 
 function printUnaryStubMethod(printer: CodePrinter, method: RPCMethodDescriptor) {
   printer
-             .printLn(`${method.serviceName}Client.prototype.${method.nameAsCamelCase} = function ${method.functionName}(requestMessage, metadata, callback, fullResponse=False) {`)
+             .printLn(`${method.serviceName}Client.prototype.${method.nameAsCamelCase} = function ${method.functionName}(requestMessage, metadata, callback, fullResponse=false) {`)
       .indent().printLn(`if (arguments.length === 2) {`)
         .indent().printLn(`callback = arguments[1];`)
       .dedent().printLn("}")
