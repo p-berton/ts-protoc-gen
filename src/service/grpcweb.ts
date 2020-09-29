@@ -385,12 +385,12 @@ function printUnaryStubMethodTypes(printer: CodePrinter, method: RPCMethodDescri
       .indent().printLn(`requestMessage: ${method.requestType},`)
                .printLn(`metadata: grpc.Metadata,`)
                .printLn(`callback: (error: ServiceError|null, responseMessage: ${method.responseType}|null) => void`)
-    .dedent().printLn(`): UnaryResponse;`);
+    .dedent().printLn(`): UnaryResponse;`)
              .printLn(`${method.nameAsCamelCase}(`)
       .indent().printLn(`requestMessage: ${method.requestType},`)
                .printLn(`callback: (error: ServiceError|null, responseMessage: ${method.responseType}|null) => void,`)
                .printLn(`fullResponse: boolean`)
-    .dedent().printLn(`): UnaryResponse;`);
+    .dedent().printLn(`): UnaryResponse;`)
              .printLn(`${method.nameAsCamelCase}(`)
       .indent().printLn(`requestMessage: ${method.requestType},`)
                .printLn(`callback: (error: ServiceError|null, responseMessage: ${method.responseType}|null) => void`)
